@@ -5,48 +5,19 @@ module:
   mounts:
   - source: node_modules/bootstrap/dist/js/bootstrap.bundle.js
     target: assets/js/bootstrap.js
-    module:
-  - disableWatch: false
-    excludeFiles: null
-    includeFiles: null
-    lang: ""
-    source: content
+  - source: content
     target: content
-  - disableWatch: false
-    excludeFiles: null
-    includeFiles: null
-    lang: ""
-    source: data
+  - source: data
     target: data
-  - disableWatch: false
-    excludeFiles: null
-    includeFiles: null
-    lang: ""
-    source: layouts
+  - source: layouts
     target: layouts
-  - disableWatch: false
-    excludeFiles: null
-    includeFiles: null
-    lang: ""
-    source: i18n
+  - source: i18n
     target: i18n
-  - disableWatch: false
-    excludeFiles: null
-    includeFiles: null
-    lang: ""
-    source: archetypes
+  - source: archetypes
     target: archetypes
-  - disableWatch: false
-    excludeFiles: null
-    includeFiles: null
-    lang: ""
-    source: assets
+  - source: assets
     target: assets
-  - disableWatch: false
-    excludeFiles: null
-    includeFiles: null
-    lang: ""
-    source: static
+  - source: static
     target: static
 outputs:
   home:
@@ -57,3 +28,4 @@ outputs:
 caches:
   images:
     dir: :cacheDir/images
+disableKinds: RSS
