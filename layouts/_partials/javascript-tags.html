@@ -1,0 +1,5 @@
+{{- with resources.Get "js/bootstrap.js" | fingerprint -}}
+  {{- with . | fingerprint -}}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer> </script>
+  {{- end -}}
+{{- end -}}

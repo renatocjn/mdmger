@@ -1,0 +1,15 @@
+baseURL: "https://localhost:1313/"
+languageCode: en
+title: Welp
+module:
+  mounts:
+  - source: assets
+    target: assets/
+  - source: node_modules/bootstrap/dist/js/bootstrap.bundle.js
+    target: assets/js/bootstrap.js
+outputs:
+  home:
+  - html
+  taxonomy: []
+  term: []
+  rss: []

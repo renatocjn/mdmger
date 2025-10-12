@@ -1,0 +1,11 @@
+{{ with resources.Get "sass/main.scss" -}}
+  {{- $optionsCss := dict 
+      "enableSourceMap" "true"
+      "outputStyle" "compressed"
+      "transpiler" "dartsass" 
+      "targetPath" "css/main.css"
+  -}}
+  {{- with . | toCSS $optionsCss | fingerprint -}}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+  {{- end -}}
+{{- end }}
