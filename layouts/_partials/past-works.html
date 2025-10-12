@@ -2,26 +2,15 @@
   <h3>Notable past work</h3>
 
   <ul id="update-list">
+    {{ $works := index .Site.Data "notable-work" }}
+    {{ range $works }}
     <li class="update-item">
-      <div class="update-date">Today</div>
+      <div class="update-date">{{.date | time.Format ":date_long"}}</div>
       <div class="timeline-circle"></div>
-      <div class="update-title">Book 1</div>
+      <div class="update-title">{{.title}}</div>
       <div class="timeline-line"></div>
-      <div class="update-description">Book 1 info</div>
+      <div class="update-description">{{.description}}</div>
     </li>
-    <li class="update-item">
-      <div class="update-date">Yesterday</div>
-      <div class="timeline-circle"></div>
-      <div class="update-title">Book 3</div>
-      <div class="timeline-line"></div>
-      <div class="update-description">Book 2 info</div>
-    </li>
-    <li class="update-item">
-      <div class="update-date">Day before</div>
-      <div class="timeline-circle"></div>
-      <div class="update-title">Book 3</div>
-      <div class="timeline-line"></div>
-      <div class="update-description">Book 3 info</div>
-    </li>
+    {{ end }}
   </ul>
 </section>

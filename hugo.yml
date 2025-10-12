@@ -3,10 +3,51 @@ languageCode: en
 title: Welp
 module:
   mounts:
-  - source: assets
-    target: assets/
   - source: node_modules/bootstrap/dist/js/bootstrap.bundle.js
     target: assets/js/bootstrap.js
+    module:
+  - disableWatch: false
+    excludeFiles: null
+    includeFiles: null
+    lang: ""
+    source: content
+    target: content
+  - disableWatch: false
+    excludeFiles: null
+    includeFiles: null
+    lang: ""
+    source: data
+    target: data
+  - disableWatch: false
+    excludeFiles: null
+    includeFiles: null
+    lang: ""
+    source: layouts
+    target: layouts
+  - disableWatch: false
+    excludeFiles: null
+    includeFiles: null
+    lang: ""
+    source: i18n
+    target: i18n
+  - disableWatch: false
+    excludeFiles: null
+    includeFiles: null
+    lang: ""
+    source: archetypes
+    target: archetypes
+  - disableWatch: false
+    excludeFiles: null
+    includeFiles: null
+    lang: ""
+    source: assets
+    target: assets
+  - disableWatch: false
+    excludeFiles: null
+    includeFiles: null
+    lang: ""
+    source: static
+    target: static
 outputs:
   home:
   - html
