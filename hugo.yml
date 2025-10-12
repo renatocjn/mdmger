@@ -13,3 +13,6 @@ outputs:
   taxonomy: []
   term: []
   rss: []
+caches:
+  images:
+    dir: :cacheDir/images
