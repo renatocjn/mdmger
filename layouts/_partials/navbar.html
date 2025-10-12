@@ -11,9 +11,18 @@
           Language
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">English {{ transform.Emojify ":gb:" }}</a></li>
-          <li><a class="dropdown-item" href="#">French {{ transform.Emojify ":fr:" }}</a></li>
-          <li><a class="dropdown-item" href="#">German {{ transform.Emojify ":de:" }}</a></li>
+          {{- $langEmojis := dict 
+            "en-GB" ":uk:"
+            "pt-BR" ":brazil:"
+            "de-DE" ":de:"
+            "fr-FR" ":fr:"
+          -}}
+          {{- range .Site.Home.AllTranslations }}
+          <li><a class="dropdown-item" href="{{ .RelPermalink }}" hreflang="{{ .Language.LanguageCode }}">
+            {{.Language.LanguageName}} 
+            {{ transform.Emojify (index $langEmojis .Language.LanguageCode) }}
+          </a></li>
+          {{- end }}
         </ul>
       </li>
       <li class="nav-item">

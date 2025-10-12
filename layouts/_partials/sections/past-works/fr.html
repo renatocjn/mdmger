@@ -1,0 +1,16 @@
+<section id="past-works">
+  <h3>Notable past work</h3>
+
+  <ul id="update-list">
+    {{ $works := index .Site.Data (slice "notable-work" .Site.Language.Lang) }}
+    {{ range $works }}
+    <li class="update-item">
+      <div class="update-date">{{.date | time.Format ":date_long"}}</div>
+      <div class="timeline-circle"></div>
+      <div class="update-title">{{.title}}</div>
+      <div class="timeline-line"></div>
+      <div class="update-description">{{.description}}</div>
+    </li>
+    {{ end }}
+  </ul>
+</section>

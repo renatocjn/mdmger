@@ -2,7 +2,7 @@
   <h3>Notable past work</h3>
 
   <ul id="update-list">
-    {{ $works := index .Site.Data "notable-work" }}
+    {{ $works := index .Site.Data (slice "notable-work" .Site.Language.Lang) }}
     {{ range $works }}
     <li class="update-item">
       <div class="update-date">{{.date | time.Format ":date_long"}}</div>

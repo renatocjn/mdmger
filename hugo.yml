@@ -1,5 +1,5 @@
 baseURL: "https://localhost:1313/"
-languageCode: en
+defaultContentLanguage: en
 title: Welp
 module:
   mounts:
@@ -29,3 +29,16 @@ caches:
   images:
     dir: :cacheDir/images
 disableKinds: RSS
+languages:
+  en: 
+    languageName: English
+    languageCode: en-GB
+  fr:
+    languageName: Français
+    languageCode: fr-FR
+  de:
+    languageName: Deutsch
+    languageCode: de-DE
+  pt:
+    languageName: Português
+    languageCode: pt-BR

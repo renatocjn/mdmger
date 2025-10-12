@@ -11,12 +11,12 @@
         {{ partial "sections/hero.html" . }}
       </div>
       <div class="container-sm">
-        {{ partial "sections/profile-info.html" . }}
+        {{ partial (printf "sections/profile-info/%s.html" .Site.Language.Lang) . }}
         <hr/>
-        {{ partial "sections/services.html" . }}
-        {{ partial "sections/contact-form.html" . }}
-        {{ partial "sections/location.html" . }}
-        {{ partial "sections/past-works.html" . }}
+        {{ partial (printf "sections/services/%s.html" .Site.Language.Lang) . }}
+        {{ partial (printf "sections/contact-form/%s.html" .Site.Language.Lang) . }}
+        {{ partial (printf "sections/location/%s.html" .Site.Language.Lang) . }}
+        {{ partial (printf "sections/past-works/%s.html" .Site.Language.Lang) . }}
       </div>
     </main>
   </body>
