@@ -1,0 +1,9 @@
+language: langue
+name: Nom
+email: Adresse email
+phone: No de téléphone
+message: Message
+send: Envoyer!
+attachments: Pièces jointes
+limit: Veuillez compresser si plusieurs fichiers et limiter à 5 Mo.
+form_autoresponse: Merci de m'avoir contacté, je vous répondrai dans les plus brefs délais.

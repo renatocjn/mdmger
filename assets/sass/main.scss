@@ -1,17 +1,96 @@
+@use "sass:map";
+
+$plt-blue: #4F31DE;
+$plt-green: #33DE31;
+$plt-brown: #89664C;
+$plt-orange: #DE7D31;
+$plt-gray: #49445E;
+
+$primary: $plt-blue;
+$secondary: $plt-brown;
+$warning: $plt-orange;
+$success: $plt-green;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+h3 {
+  margin-bottom: 0;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+hr {
+  margin-top: map-get($spacers, 1);
+  margin-bottom: map-get($spacers, 3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFF;
+  background: linear-gradient(0deg, $plt-orange 0%, $plt-brown 20%, #180800 78%);
+}
+
+footer {
+  a {
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .github-logo {
+    height: 1em;
+    margin-right: map-get($spacers, 1);
+  }
+}
+
+section {
+  scroll-margin-top: 5rem;
+  background-color: white;
+  border-radius: calc( 2* $border-radius);
+  padding: map-get($spacers, 4) map-get($spacers, 5);
+}
+
+.spacer-bg-1, .spacer-bg-2, .spacer-bg-3 {
+  height: 100%;
+  width: 100%;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  border-radius: calc( 2* $border-radius);
+}
+
+.spacer-bg-1 {
+  background-position: center;
+}
+
+.spacer-bg-2 {
+  background-position: left;
+}
+
+.spacer-bg-3 {
+  background-position: top;
+}
 
 .hero {
   width: 99vw;
   img {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
   }
-  margin-bottom: 1rem;
-}
-
-section {
-  margin-bottom: 2rem;
+  .alert {
+    position: absolute;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+  }
 }
 
 #update-list {

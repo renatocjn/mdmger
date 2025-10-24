@@ -1,3 +1,22 @@
 <div class="hero">
-  <img src="https://placeholder.pics/svg/1600x600" alt="Hero">
+  <div class="alert alert-danger mt-5" role="alert">
+    <div class="d-flex">
+      <div class="display-3">
+        {{ transform.Emojify ":no_entry:" }}
+      </div>
+      <div class="mx-3 text-center flex-grow-1">
+        THIS WEBSITE IS STILL IN CONSTRUCTION !!! <br/>
+        CE SITE WEB EST TOUJOURS EN CONSTRUCTION !!! <br/>
+        ESTE SITE AINDA ESTÁ EM CONSTRUÇÃO !!! <br/>
+      </div>
+      <div class="display-3">
+        {{ transform.Emojify ":no_entry:" }}
+      </div>
+    </div>
+  </div>
+  {{ with resources.Get "img/hero.jpg" }}
+    {{ with .Crop "3840x2160 right" }}
+      <img src="{{.RelPermalink}}" alt="Hero">
+    {{ end }}
+  {{ end }}
 </div>

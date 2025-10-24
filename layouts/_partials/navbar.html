@@ -1,14 +1,14 @@
-<nav class="navbar navbar-expand-md sticky-top bg-light border-bottom border-dark">
+<nav class="navbar navbar-expand-md sticky-top bg-light border-bottom border-dark px-2">
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
           data-bs-target="#navbarNav" aria-controls="navbarNav" 
           aria-expanded="true" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav px-3">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Language
+          {{ transform.Emojify ":globe_with_meridians:" }}
         </a>
         <ul class="dropdown-menu">
           {{- $langEmojis := dict 
@@ -25,18 +25,11 @@
           {{- end }}
         </ul>
       </li>
+      {{ range .Site.Menus.main }}
       <li class="nav-item">
-        <a class="nav-link" href="#services"> Services </a>
+        <a class="nav-link" href="{{ .PageRef }}"> {{ .Name }} </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact-form"> Contact </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#location"> Location </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#past-works">Past work</a>
-      </li>
+      {{ end }}
     </ul>
   </div>
 </nav>

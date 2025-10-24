@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "hugo",
+    "build": "hugo --cleanDestinationDir --gc --ignoreCache",
     "start": "hugo serve --printUnusedTemplates --disableFastRender",
     "start:watch": "hugo serve -w --printUnusedTemplates --disableFastRender"
   },

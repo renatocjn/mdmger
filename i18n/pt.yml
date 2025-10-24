@@ -1,0 +1,9 @@
+language: Língua 
+name: Nome
+email: Endereço de email
+phone: Número de telefone
+message: Mensagem
+send: Mandar!
+attachments: Anexos
+limit: Favor zippar caso múltiplos arquivos e limitar à 5 MB
+form_autoresponse: Obrigado pelo contato, entrarei em contato assim que possível

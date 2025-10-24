@@ -1,0 +1,41 @@
+<form action="https://formsubmit.co/40afe1eb468e1cfd9c61bb8cdab11a9e" method="POST" enctype="multipart/form-data">
+  <div class="row g-2">
+    <div class="col">
+      <div>
+        <label for="name"> {{ T "name" }} </label>
+        <input class="form-control has-validation" name="name" type="text" required/>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <label for="email"> {{ T "email" }} </label>
+        <input class="form-control has-validation" name="email" type="email"/>
+      </div>
+    </div>
+    <div class="col">
+      <div>
+        <label for="phone"> {{ T "phone" }} </label>
+        <input class="form-control has-validation" name="phone" type="tel"/>
+      </div>
+    </div>
+  </div>
+  <div class="mt-2">
+    <label for="message"> {{ T "message" }} </label>
+    <textarea class="form-control has-validation" name="message" rows="10" required></textarea>
+  </div>
+  <div class="mt-2">
+    <label for="attachments"> 
+      {{ T "attachments" }} 
+      <small class="text-body-secondary"> {{ T "limit" }} </small>
+    </label>
+    <input class="form-control" type="file" name="attachments"/>
+  </div>
+
+  <input type="hidden" name="_autoresponse" value="{{ T `form_autoresponse` }}" />
+
+  <div class="row mt-3">
+    <div class="col">
+      <button type="submit" class="btn btn-primary w-100"> {{ T "send" }} </button>
+    </div>
+  </div>
+</form>

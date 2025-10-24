@@ -1,0 +1,29 @@
+{{- with resources.Get "img/spacer-bg/leaf.jpg" -}}
+{{- with .Resize "636x" -}}
+.spacer-bg-1 {
+  background-image: url({{ .RelPermalink }});
+  max-width: {{ .Width }}px;
+  max-height: {{ .Height }}px;
+}
+{{- end -}}
+{{- end }}
+
+{{ with resources.Get "img/spacer-bg/txt.jpg" -}}
+{{- with .Resize "1014x" -}}
+.spacer-bg-2 {
+  background-image: url({{ .RelPermalink }});
+  max-width: {{ .Width }}px;
+  max-height: {{ .Height }}px;
+}
+{{- end -}}
+{{- end }}
+
+{{ with resources.Get "img/spacer-bg/books.jpg" -}}
+{{- with .Resize "x1288" -}}
+.spacer-bg-3 {
+  background-image: url({{ .RelPermalink }});
+  max-width: {{ .Width }}px;
+  max-height: {{ .Height }}px;
+}
+{{- end -}}
+{{- end -}}

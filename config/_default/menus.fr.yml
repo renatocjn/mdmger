@@ -1,0 +1,16 @@
+main:
+- name: Services
+  pageRef: "#services"
+  weight: 1
+- name: Tarifs
+  pageRef: "#costs"
+  weight: 2
+- name: Contactez-moi
+  pageRef: "#contact-form"
+  weight: 3
+- name: Adresse
+  pageRef: "#location"
+  weight: 4
+- name: Antécédents Professionnels
+  pageRef: "#past-works"
+  weight: 5

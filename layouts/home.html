@@ -1,24 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Site.Language.LanguageCode}}">
   <head>
-    <title>Mdm XXXXX, translator</title>
+    <title>Mdm Batista</title>
     {{ partial "tags/css-tags.html" . }}
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
   </head>
   <body>
     <main>
+
       {{ partial "navbar.html" . }}
+
+
       <div class="container-fluid p-0">
         {{ partial "sections/hero.html" . }}
       </div>
+
+
       <div class="container-sm">
-        {{ partial (printf "sections/profile-info/%s.html" .Site.Language.Lang) . }}
-        <hr/>
-        {{ partial (printf "sections/services/%s.html" .Site.Language.Lang) . }}
-        {{ partial (printf "sections/contact-form/%s.html" .Site.Language.Lang) . }}
-        {{ partial (printf "sections/location/%s.html" .Site.Language.Lang) . }}
+
+        <div class="mb-3">
+          {{ partial (printf "sections/profile-info/%s.html" .Site.Language.Lang) . }}
+        </div>
+
+
+        <div class="mb-3">
+          {{ partial (printf "sections/services/%s.html" .Site.Language.Lang) . }}
+        </div>
+
+
+        <div class="row g-2 mb-3">
+          <div class="col-4">
+            <div class="spacer-bg-1"></div>
+          </div>
+          <div class="col-8">
+            {{ partial (printf "sections/contact-section/%s.html" .Site.Language.Lang) . }}
+          </div>
+        </div>
+
+
+        <div class="row g-2 mb-3">
+          <div class="col-9">
+            {{ partial (printf "sections/location/%s.html" .Site.Language.Lang) . }}
+          </div>
+          <div class="col-3">
+            <div class="spacer-bg-2"></div>
+          </div>
+        </div>
+
+
         {{ partial (printf "sections/past-works/%s.html" .Site.Language.Lang) . }}
       </div>
+
     </main>
+
+    <footer class="bg-light border-1 mt-3 mx-0 py-2 px-3 text-end">
+      <a href="https://http.cat/status/418">
+        {{ with resources.Get "img/github-mark.png" }}
+        <img class="github-logo" src="{{ .RelPermalink }}" alt="GitHub logo" title="Source code">
+        {{ else }}
+          Source code
+        {{ end }}
+      </a>
+      &copy; 
+      {{ now.Year }}
+    </footer>
   </body>
 
   {{ partial "tags/javascript-tags.html" . }}

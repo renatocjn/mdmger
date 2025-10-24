@@ -1,6 +1,15 @@
 baseURL: "https://localhost:1313/"
-defaultContentLanguage: en
+defaultContentLanguage: fr
 title: Welp
+disableKinds: RSS
+enableRobotsTXT: true
+languages:
+  fr:
+    languageName: Français
+    languageCode: fr-FR
+  pt:
+    languageName: Português
+    languageCode: pt-BR
 module:
   mounts:
   - source: node_modules/bootstrap/dist/js/bootstrap.bundle.js
@@ -28,17 +37,3 @@ outputs:
 caches:
   images:
     dir: :cacheDir/images
-disableKinds: RSS
-languages:
-  en: 
-    languageName: English
-    languageCode: en-GB
-  fr:
-    languageName: Français
-    languageCode: fr-FR
-  de:
-    languageName: Deutsch
-    languageCode: de-DE
-  pt:
-    languageName: Português
-    languageCode: pt-BR

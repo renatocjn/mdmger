@@ -1,0 +1,8 @@
+<div class="d-flex py-2 align-items-center">
+  {{ with resources.Get "img/WhatsApp.png" }}
+    {{ with .Resize "24x24"}}
+      <img src="{{ .RelPermalink }}" alt="Whatsapp logo" width="{{.Width}}" height="{{.Height}}">
+    {{ end }}
+  {{ end }}
+  <a href="tel:+330783652413">+33 (0) 07 83 65 24 13</a>
+</div>
