@@ -30,20 +30,20 @@
 
 
         <div class="row g-2 mb-3">
-          <div class="col-4">
+          <div class="col-lg-4">
             <div class="spacer-bg-1"></div>
           </div>
-          <div class="col-8">
+          <div class="col-12 col-lg-8">
             {{ partial (printf "sections/contact-section/%s.html" .Site.Language.Lang) . }}
           </div>
         </div>
 
 
         <div class="row g-2 mb-3">
-          <div class="col-9">
+          <div class="col-12 col-lg-9">
             {{ partial (printf "sections/location/%s.html" .Site.Language.Lang) . }}
           </div>
-          <div class="col-3">
+          <div class="d-none d-lg-block col-lg-3">
             <div class="spacer-bg-2"></div>
           </div>
         </div>

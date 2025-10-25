@@ -1,11 +1,11 @@
 <section id="profile-info">
-  <div class="row align-items-center">
-    <div class="col-3 align-items-center">
+  <div class="row">
+    <div class="col-12 col-lg-3 d-flex justify-content-center">
       {{ with resources.GetRemote "https://avatar.iran.liara.run/public/96" }}
         <img src="{{ .RelPermalink }}" height="300" width="200" alt="profile pic">
       {{ end }}
     </div>
-    <div class="col-9">
+    <div class="col-12 col-lg-9">
       <h1 class="display-3">
         Gercélia Batista de O. Mendes
       </h1>
