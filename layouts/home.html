@@ -5,6 +5,7 @@
     {{ partial "tags/css-tags.html" . }}
     <meta name="robots" content="noindex, nofollow" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    {{ partial (printf "tags/seo/%s.html" .Site.Language.Lang) . }}
   </head>
   <body>
     <main>

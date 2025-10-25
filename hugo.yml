@@ -1,6 +1,6 @@
 baseURL: "https://localhost:1313/"
 defaultContentLanguage: fr
-title: Welp
+title: Mdm Gercelia
 disableKinds: RSS
 enableRobotsTXT: true
 languages:
