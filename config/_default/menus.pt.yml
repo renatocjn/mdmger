@@ -11,6 +11,6 @@ main:
 - name: Localização
   pageRef: "#location"
   weight: 4
-- name: Histórico de Trabalho
-  pageRef: "#past-works"
+- name: Links
+  pageRef: "#links"
   weight: 5

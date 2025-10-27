@@ -11,6 +11,6 @@ main:
 - name: Adresse
   pageRef: "#location"
   weight: 4
-- name: Antécédents Professionnels
-  pageRef: "#past-works"
+- name: Links
+  pageRef: "#links"
   weight: 5

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "hugo --cleanDestinationDir --gc --ignoreCache",
-    "start": "hugo serve --printUnusedTemplates --disableFastRender",
+    "start": "hugo serve --printUnusedTemplates",
     "start:watch": "hugo serve -w --printUnusedTemplates --disableFastRender"
   },
   "author": "Renato Juacaba Neto",
