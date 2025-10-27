@@ -4,11 +4,20 @@
 
   <ul id="link-list">
     {{ $langId := .Site.Language.Lang }}
+    {{ $baseUrl := .Site.BaseURL }}
     {{ range .Site.Data.links }}
     <li class="update-item">
-      <a target="_blank" href="{{ .url }}">
-        {{ or (index .description $langId) (index .description "fr") }}
-      </a>
+      {{ if hasPrefix .url "/" }}
+        {{ $url := (print $baseUrl (strings.TrimLeft "/" .url)) }}
+        <a target="_blank" href="{{ $url }}">
+          {{ or (index .description $langId) (index .description "fr") }}
+        </a>
+      {{ else }}
+        <a target="_blank" href="{{ .url }}">
+          {{ or (index .description $langId) (index .description "fr") }}
+        </a>
+      {{ end }}
+      
     </li>
     {{ end }}
   </ul>
