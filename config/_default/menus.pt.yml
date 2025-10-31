@@ -2,7 +2,7 @@ main:
 - name: Serviços
   pageRef: "#services"
   weight: 1
-- name: Custos
+- name: Valores
   pageRef: "#costs"
   weight: 2
 - name: Contato
